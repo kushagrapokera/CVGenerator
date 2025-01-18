@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>CV Form</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: hsl(0deg 0% 100%);
+            color: hsl(0deg 0% 25.1%);
+            line-height: 1.45;
+        }
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: hsl(0deg 0% 25.1%);
+        }
+        .form-control {
+            font-size: 0.85rem;
+            color: hsl(0deg 0% 25.1%);
+            background-color: hsl(210deg 4.76% 91%);
+            border-color: hsl(210, 7%, 91%);
+        }
+        .btn-primary {
+            background-color: hsl(217.32deg 89.13% 18.04%);
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: hsl(214.08deg 81.75% 49.41%);
+        }
+        .container {
+            max-width: 750px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: lighter;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CV Generator</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="summary">About You</label>
+                <textarea class="form-control" id="summary" name="summary" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="degree">Degree</label>
+                <input type="text" class="form-control" id="degree" name="degree">
+            </div>
+            <div class="form-group">
+                <label for="school">School</label>
+                <input type="text" class="form-control" id="school" name="school">
+            </div>
+            <div class="form-group">
+                <label for="university">University</label>
+                <input type="text" class="form-control" id="university" name="university">
+            </div>
+            <div class="form-group">
+                <label for="previous_work">Previous Work</label>
+                <textarea class="form-control" id="previous_work" name="previous_work" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills</label>
+                <textarea class="form-control" id="skills" name="skills" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

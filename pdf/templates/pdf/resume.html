@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+          crossorigin="anonymous">
+    <title>User Profile</title>
+</head>
+<body class="bg-light">
+    <div class="container mt-5 p-4 bg-white shadow rounded">
+        <h2 class="text-center mb-4">{{ user_profile.name }}</h2>
+        <h4>Email: <span class="text-muted">{{ user_profile.email }}</span></h4>
+        <h4>Phone: <span class="text-muted">{{ user_profile.phone }}</span></h4>
+        <hr class="my-4" />
+        <div class="mb-4">
+            <h5>Summary</h5>
+            <p class="text-muted">{{ user_profile.summary }}</p>
+        </div>
+        <hr class="my-4" />
+        <div class="mb-4">
+            <h5>Skills</h5>
+            <p class="text-muted">{{ user_profile.skills }}</p>
+        </div>
+        <hr class="my-4" />
+        <div class="mb-4">
+            <h5>Education</h5>
+            <ul class="list-unstyled">
+                <li>Schooling: <span class="text-muted">{{ user_profile.school }}</span></li>
+                <li>{{ user_profile.degree }} from <span class="text-muted">{{ user_profile.university }}</span></li>
+            </ul>
+        </div>
+        <hr class="my-4" />
+        <div class="mb-4">
+            <h5>Previous Work</h5>
+            <p class="text-muted">{{ user_profile.previous_work }}</p>
+        </div>
+    </div>
+</body>
+</html>
